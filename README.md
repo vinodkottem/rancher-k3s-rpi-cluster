@@ -30,6 +30,7 @@ sudo cat /var/lib/rancher/k3s/server/node-token
 ####  2. Setting up Agent on another Pi
 
 1. Manually install k3s in worker node & run k3s in agent mode instead of server.
+
 2. Run agent
 
 ```bash
