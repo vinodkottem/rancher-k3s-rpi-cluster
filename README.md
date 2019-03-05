@@ -4,8 +4,25 @@
 
 ### Requirements
 
-1. 2 raspberry pi's (used 3b+ models)
+1. One or more raspberry pi's (used 3b+ models)
 
+####  0. Before installing k3s or kubernetes 
+
+1. Run the following commands to disable swap
+
+```bash
+sudo dphys-swapfile swapoff
+
+sudo dphys-swapfile uninstall
+
+sudo update-rc.d dphys-swapfile remove
+```
+
+2. Add the following line to  /boot/cmdline.txt (must be single line :P ) 
+
+```text
+cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory
+```
 
 ####  1. Setting up Master Node
 
